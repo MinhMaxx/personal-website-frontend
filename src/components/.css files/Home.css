@@ -1,0 +1,21 @@
+.home {
+  padding: 50px;
+  text-align: center;
+}
+
+.home-title {
+  font-size: 3em;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.home-subtitle {
+  font-size: 1.5em;
+  color: #555;
+  margin-bottom: 40px;
+}
+
+.home-description {
+  color: #666;
+  line-height: 1.6;
+}

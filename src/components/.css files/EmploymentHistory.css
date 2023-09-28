@@ -1,0 +1,22 @@
+.employment-history {
+  padding: 20px;
+}
+
+.employment-item {
+  margin-bottom: 40px;
+}
+
+.employment-title {
+  font-size: 1.5em;
+  color: #333;
+}
+
+.employment-company {
+  font-size: 1.2em;
+  color: #555;
+}
+
+.employment-description {
+  margin-top: 10px;
+  color: #666;
+}

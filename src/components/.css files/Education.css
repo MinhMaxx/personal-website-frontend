@@ -1,0 +1,22 @@
+.education {
+  padding: 20px;
+}
+
+.education-item {
+  margin-bottom: 40px;
+}
+
+.education-degree {
+  font-size: 1.5em;
+  color: #333;
+}
+
+.education-school {
+  font-size: 1.2em;
+  color: #555;
+}
+
+.education-description {
+  margin-top: 10px;
+  color: #666;
+}

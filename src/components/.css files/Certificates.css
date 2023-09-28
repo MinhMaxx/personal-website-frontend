@@ -1,0 +1,22 @@
+.certificates {
+  padding: 20px;
+}
+
+.certificate-item {
+  margin-bottom: 40px;
+}
+
+.certificate-title {
+  font-size: 1.5em;
+  color: #333;
+}
+
+.certificate-institution {
+  font-size: 1.2em;
+  color: #555;
+}
+
+.certificate-description {
+  margin-top: 10px;
+  color: #666;
+}

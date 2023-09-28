@@ -1,0 +1,31 @@
+.project {
+  padding: 20px;
+}
+
+.project-item {
+  margin-bottom: 40px;
+}
+
+.project-title {
+  font-size: 1.5em;
+  color: #333;
+}
+
+.project-details {
+  font-size: 1.2em;
+  color: #555;
+}
+
+.project-description {
+  margin-top: 10px;
+  color: #666;
+}
+
+.project-link {
+  margin-top: 15px;
+  color: #3498db;
+  text-decoration: none;
+}
+.project-link:hover {
+  text-decoration: underline;
+}
