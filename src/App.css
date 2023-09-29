@@ -36,3 +36,27 @@
     transform: rotate(360deg);
   }
 }
+
+/*Dracula Theme Color*/
+
+body {
+  background-color: #282a36 !important;
+  color: #f8f8f2 !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #f8f8f2 !important;
+}
+
+a {
+  color: #8be9fd;
+}
+
+a:hover {
+  color: #50fa7b;
+}

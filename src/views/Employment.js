@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import "./.css files/EmploymentHistory.css";
+import "./Employment.css";
 
-const EmploymentHistory = () => {
+const Employment = () => {
   const [histories, setHistories] = useState([]);
 
   useEffect(() => {
-    const fetchEmploymentHistory = async () => {
+    const fetchEmployment = async () => {
       try {
         const response = await axios.get(
           "https://minh-personal-website-backend-3e5c1e321cd8.herokuapp.com/employment"
@@ -17,11 +17,11 @@ const EmploymentHistory = () => {
       }
     };
 
-    fetchEmploymentHistory();
+    fetchEmployment();
   }, []);
 
   return (
-    <section id="employment-history" className="employment-history">
+    <section id="employment" className="employment">
       <h2>Employment History</h2>
       {histories.map((history) => (
         <div key={history.id} className="history-card">
@@ -35,4 +35,4 @@ const EmploymentHistory = () => {
   );
 };
 
-export default EmploymentHistory;
+export default Employment;

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import "./.css files/Projects.css";
+import "./Projects.css";
 
 const Projects = () => {
   const [projects, setProjects] = useState([]);

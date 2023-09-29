@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import "./.css files/Certificates.css";
+import "./Certificates.css";
 
 const Certificates = () => {
   const [certificates, setCertificates] = useState([]);

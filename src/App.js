@@ -1,13 +1,14 @@
 import React from "react";
 import Navbar from "./components/Navbar";
-import Home from "./components/Home";
-import Projects from "./components/Projects";
-import Testimonials from "./components/Testimonials";
-import EmploymentHistory from "./components/EmploymentHistory";
-import Education from "./components/Education";
-import Certificates from "./components/Certificates";
-import Contact from "./components/Contact";
+import Home from "./views/Home";
+import Projects from "./views/Projects";
+import Testimonials from "./views/Testimonials";
+import Employment from "./views/Employment";
+import Education from "./views/Education";
+import Certificates from "./views/Certificates";
+import Contact from "./views/Contact";
 import "./App.css";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
   return (
@@ -16,7 +17,7 @@ function App() {
       <Home />
       <Projects />
       <Testimonials />
-      <EmploymentHistory />
+      <Employment />
       <Education />
       <Certificates />
       <Contact />
