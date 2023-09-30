@@ -1,23 +1,21 @@
 /* Override Bootstrap Navbar styles */
 .navbar {
   background-color: #282a36 !important;
-  padding: 0 1rem !important; /* Adjust as needed */
-  font-weight: bold !important;
+  padding: 0 1rem !important;
+  font-family: "RenogareSoft-Regular", sans-serif;
 }
 
 /* Style for brand name */
-.navbar-brand {
-  font-size: 1rem !important; /* Adjust as needed */
-  padding: 0.5rem !important; /* Adjust as needed */
+.navbar-brand img {
+  /* Add your custom styles here */
+  height: auto;
+  width: auto;
+  max-height: 40px; /* You can adjust this value */
 }
 
 /* Style for nav links */
 .nav-link {
-  font-size: 0.8rem !important;
-  padding: 0.5rem 1rem !important;
-}
-
-/* Transition for nav links */
-.nav-link {
+  font-size: 1rem !important;
+  padding: 0.5rem !important; /* Adjust this value */
   transition: color 0.3s ease-in-out;
 }

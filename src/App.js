@@ -9,6 +9,7 @@ import Certificates from "./views/Certificates";
 import Contact from "./views/Contact";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
+import "./assets/fonts.css";
 
 function App() {
   return (
