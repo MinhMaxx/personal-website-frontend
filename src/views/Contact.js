@@ -15,7 +15,7 @@ const Contact = () => {
     try {
       // Adjust this URL to your backend endpoint for handling contact submissions
       await axios.post(
-        "https://minh-personal-website-backend-3e5c1e321cd8.herokuapp.com/contact",
+        "https://minh-personal-website-backend-3e5c1e321cd8.herokuapp.com/contact/submit",
         formData
       );
       alert("Message sent successfully!");
