@@ -10,6 +10,7 @@ import Contact from "./views/Contact";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./assets/fonts.css";
+import "font-awesome/css/font-awesome.min.css";
 
 function App() {
   return (

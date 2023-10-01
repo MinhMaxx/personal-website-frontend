@@ -1,21 +1,69 @@
-/* Override Bootstrap Navbar styles */
+/* Customizing the Navbar by overriding default Bootstrap styles */
 .navbar {
-  background-color: #282a36 !important;
-  padding: 0 1rem !important;
-  font-family: "RenogareSoft-Regular", sans-serif;
+  background-color: #282a36 !important; /* Changing the background color of the navbar */
+  padding: 0 1rem !important; /* Adjusting the padding for the navbar */
+  font-family: "RenogareSoft-Regular", sans-serif; /* Applying a custom font to the navbar */
 }
 
-/* Style for brand name */
+/* Adjusting the appearance and sizing of the brand image */
 .navbar-brand img {
-  /* Add your custom styles here */
-  height: auto;
-  width: auto;
-  max-height: 40px; /* You can adjust this value */
+  height: auto; /* Making the height responsive */
+  width: auto; /* Making the width responsive */
+  max-height: 40px; /* Setting a max height to ensure consistency in layout and appearance */
 }
 
-/* Style for nav links */
+/* Modifying the navigation links styles */
 .nav-link {
-  font-size: 1rem !important;
-  padding: 0.5rem !important; /* Adjust this value */
-  transition: color 0.3s ease-in-out;
+  font-size: 1rem !important; /* Setting the font size */
+  padding: 0.5rem !important; /* Setting the padding around the nav links */
+  transition: color 0.3s ease-in-out; /* Adding a transition effect to the color change on hover */
+}
+
+/* Using Flexbox to ensure the social icons display inline */
+.social-icons {
+  display: flex; /* Aligning child elements (icons) horizontally */
+  align-items: center; /* Centering icons vertically */
+  justify-content: center; /* Centering icons horizontally */
+}
+
+/* Customizing the appearance of nav links containing social icons */
+.navbar .nav-link {
+  padding: 0 !important; /* Removing padding */
+  margin: 0 10px; /* Adding horizontal margins for spacing between icons */
+}
+
+/* Ensuring that nav links in the collapsed navbar are displayed inline */
+.navbar-collapse .nav-link {
+  display: inline-block !important; /* Changing display property to inline-block */
+}
+
+/* Adjusting the size and transition effect of FontAwesome icons */
+.nav-link .fa {
+  font-size: 20px; /* Setting the icon size */
+  /* No additional comments needed, the existing comment is sufficient */
+}
+
+/* Customizing the hover effect for the LinkedIn icon */
+.nav-link:hover .fa-linkedin-square {
+  color: #0077b5 !important; /* Applying LinkedIn’s official color upon hover */
+}
+
+/* Customizing the hover effect for the GitHub icon */
+.nav-link:hover .fa-github {
+  color: #7dbbe6 !important; /* Changing color on hover for a visual feedback */
+}
+
+/* Applying a gradient color effect to the Instagram icon upon hover */
+.nav-link:hover .fa-instagram {
+  background: linear-gradient(
+    45deg,
+    #405de6,
+    #5851db,
+    #833ab4,
+    #c13584,
+    #e1306c,
+    #fd1d1d
+  ); /* Adding a linear gradient background */
+  -webkit-background-clip: text; /* Applying the background clipping to text to make the fill color transparent */
+  -webkit-text-fill-color: transparent !important; /* Making the text color transparent to reveal the gradient */
 }
