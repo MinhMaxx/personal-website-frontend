@@ -1,22 +1,36 @@
-.education {
-  padding: 20px;
+/* Styling the degree cards */
+.degree-card {
+  background-color: #23272e !important; /* Set the card background color */
+  border: none !important; /* Remove the default border */
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Add transition for smooth transform and shadow effects */
 }
 
-.education-item {
-  margin-bottom: 40px;
+/* Change the card hover effect */
+.degree-card:hover {
+  transform: translateY(-10px); /* Lift the card up slightly on hover */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Apply shadow to make the card pop */
 }
 
-.education-degree {
-  font-size: 1.5em;
-  color: #333;
+/* Styling the card title */
+.degree-card .card-title {
+  color: #fad233; /* Change the title color */
+  font-weight: bold;
 }
 
-.education-school {
-  font-size: 1.2em;
-  color: #555;
+/* Styling the card subtitle */
+.degree-card .card-subtitle {
+  margin-bottom: 15px; /* Add margin at the bottom for spacing */
+  color: white !important; /* Make the text color white for better contrast */
 }
 
-.education-description {
-  margin-top: 10px;
-  color: #666;
+/* Styling the card text */
+.degree-card .card-text {
+  color: white; /* Make the text color white for better contrast */
+}
+
+/* Styling the field of study text */
+.degree-card .card-text small {
+  display: block; /* Make it block to appear on a new line */
+  margin-bottom: 10px; /* Add margin at the bottom for spacing */
+  color: #fad233; /* Change the text color */
 }

@@ -13,12 +13,10 @@ const MyNavbar = () => {
     // Map of sections to their associated colors
     const colors = {
       home: "#fad027",
-      projects: "#febc35",
-      testimonials: "#ffa041",
-      employment: "#ff9246",
-      education: "#ff7c4a",
-      certificates: "#ff654d",
-      contact: "#ff544f",
+      aboutme: "#febc35",
+      projects: "#ffa041",
+      testimonials: "#ff9246",
+      contact: "#ff7c4a",
     };
 
     // Update the active link color based on the section
@@ -60,6 +58,21 @@ const MyNavbar = () => {
           >
             home
           </Nav.Link>
+          {/* Define links for about me, including smooth scrolling and active color change */}
+          <Nav.Link
+            as={ScrollLink}
+            to="aboutme"
+            smooth={true}
+            duration={500}
+            spy={true}
+            exact={true}
+            activeClass="active"
+            offset={-50}
+            onSetActive={() => handleSetActive("aboutme")}
+            style={activeLinkColor === "#febc35" ? { color: "#febc35" } : {}}
+          >
+            about me
+          </Nav.Link>
           {/* Define links for projects, including smooth scrolling and active color change */}
           <Nav.Link
             as={ScrollLink}
@@ -71,7 +84,7 @@ const MyNavbar = () => {
             activeClass="active"
             offset={-50}
             onSetActive={() => handleSetActive("projects")}
-            style={activeLinkColor === "#febc35" ? { color: "#febc35" } : {}}
+            style={activeLinkColor === "#ffa041" ? { color: "#ffa041" } : {}}
           >
             projects
           </Nav.Link>
@@ -86,55 +99,9 @@ const MyNavbar = () => {
             activeClass="active"
             offset={-50}
             onSetActive={() => handleSetActive("testimonials")}
-            style={activeLinkColor === "#ffa041" ? { color: "#ffa041" } : {}}
-          >
-            testimonials
-          </Nav.Link>
-          {/* Define links for employment, including smooth scrolling and active color change */}
-
-          <Nav.Link
-            as={ScrollLink}
-            to="employment"
-            smooth={true}
-            duration={500}
-            spy={true}
-            exact={true}
-            activeClass="active"
-            offset={-50}
-            onSetActive={() => handleSetActive("employment")}
             style={activeLinkColor === "#ff9246" ? { color: "#ff9246" } : {}}
           >
-            employment
-          </Nav.Link>
-          {/* Define links for education, including smooth scrolling and active color change */}
-          <Nav.Link
-            as={ScrollLink}
-            to="education"
-            smooth={true}
-            duration={500}
-            spy={true}
-            exact={true}
-            activeClass="active"
-            offset={-50}
-            onSetActive={() => handleSetActive("education")}
-            style={activeLinkColor === "#ff7c4a" ? { color: "#ff7c4a" } : {}}
-          >
-            education
-          </Nav.Link>
-          {/* Define links for certificates, including smooth scrolling and active color change */}
-          <Nav.Link
-            as={ScrollLink}
-            to="certificates"
-            smooth={true}
-            duration={500}
-            spy={true}
-            exact={true}
-            activeClass="active"
-            offset={-50}
-            onSetActive={() => handleSetActive("certificates")}
-            style={activeLinkColor === "#ff654d" ? { color: "#ff654d" } : {}}
-          >
-            certificates
+            testimonials
           </Nav.Link>
           {/* Define links for contact, including smooth scrolling and active color change */}
           <Nav.Link
@@ -147,7 +114,7 @@ const MyNavbar = () => {
             activeClass="active"
             offset={-50}
             onSetActive={() => handleSetActive("contact")}
-            style={activeLinkColor === "#ff544f" ? { color: "#ff544f" } : {}}
+            style={activeLinkColor === "#ff7c4a" ? { color: "#ff7c4a" } : {}}
           >
             contact
           </Nav.Link>

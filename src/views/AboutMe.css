@@ -1,0 +1,45 @@
+/* Styling for the "aboutme" section */
+.aboutme {
+  font-family: "RenogareSoft-Regular", sans-serif;
+  margin-top: 80px;
+  color: white; /* Text color */
+  background-color: #282a36; /* Background color */
+  padding: 10px;
+}
+
+/* Styling for the main heading */
+.aboutme h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Styling for the navigation tabs */
+.nav-pills .nav-link {
+  border-radius: 0; /* Square tabs */
+  color: white; /* Tab text color */
+  font-size: 17px !important;
+  font-weight: bold;
+  margin: 5px;
+}
+
+/* Hover effect for the tabs */
+.nav-pills .nav-link:hover {
+  color: #fad027 !important; /* Tab text color on hover */
+}
+
+/* Styling for the active tab */
+.nav-pills .nav-link.active {
+  background-color: #ff544f !important; /* Background color of the active tab */
+}
+
+/* Styling for the tab content area */
+.tab-content {
+  border-radius: 0.5%; /* Square content area */
+  background-color: #2a2c38;
+  padding: 5px; /* Padding inside the content area */
+}
+
+/* Transition effect for smooth color change */
+.nav-pills .nav-link {
+  transition: color 0.3s ease-in-out, background-color 0.5s ease-in-out !important;
+}

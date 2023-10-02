@@ -52,6 +52,16 @@
 }
 
 /* Positioning and styling for the text overlay */
+.welcome-text {
+  position: absolute;
+  bottom: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 4;
+  font-family: "RenogareSoft-Regular", sans-serif;
+}
+
+/* Positioning and styling for the text overlay */
 .home-text {
   position: absolute;
   bottom: 10%;
@@ -63,7 +73,7 @@
 
 /* Applying gradient color to match my logo */
 .gradient-text {
-  background: linear-gradient(45deg, #ff544f, #fad027);
+  background: linear-gradient(90deg, #ff544f, #fad027);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;

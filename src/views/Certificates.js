@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import { Card, Container, Row, Col } from "react-bootstrap";
 import "./Certificates.css";
 
 const Certificates = () => {
@@ -22,13 +23,32 @@ const Certificates = () => {
 
   return (
     <section id="certificates" className="certificates">
-      <h2>Certificates</h2>
-      {certificates.map((certificate) => (
-        <div key={certificate.id} className="certificate-card">
-          <h3>{certificate.title}</h3>
-          <p>{certificate.description}</p>
-        </div>
-      ))}
+      <Container>
+        <Row>
+          {certificates.map((certificate) => (
+            <Col md={4} key={certificate._id} className="mb-4">
+              <a
+                href={certificate.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="certificate-link"
+              >
+                <Card className="certificate-card">
+                  <Card.Body>
+                    <Card.Title>
+                      {certificate.certificateName} - {certificate.organization}
+                    </Card.Title>
+                    <Card.Subtitle className="mb-2 text-muted">
+                      Issued {new Date(certificate.dateReceived).getFullYear()}
+                    </Card.Subtitle>
+                    <Card.Text>{certificate.description}</Card.Text>
+                  </Card.Body>
+                </Card>
+              </a>
+            </Col>
+          ))}
+        </Row>
+      </Container>
     </section>
   );
 };

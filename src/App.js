@@ -7,6 +7,7 @@ import Employment from "./views/Employment";
 import Education from "./views/Education";
 import Certificates from "./views/Certificates";
 import Contact from "./views/Contact";
+import AboutMe from "./views/AboutMe";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./assets/fonts.css";
@@ -17,11 +18,9 @@ function App() {
     <div className="App">
       <Navbar />
       <Home />
+      <AboutMe />
       <Projects />
       <Testimonials />
-      <Employment />
-      <Education />
-      <Certificates />
       <Contact />
     </div>
   );

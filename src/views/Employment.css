@@ -1,22 +1,28 @@
-.employment-history {
-  padding: 20px;
+/* Applying general styles to the employment section */
+.employment {
+  background-color: transparent; /* Applying a background color for contrast */
 }
 
-.employment-item {
-  margin-bottom: 40px;
+/* Styles for the vertical timeline elements */
+.vertical-timeline-element-title {
+  color: #fad233 !important; /* Setting the color for the titles in the timeline */
+  font-weight: bold; /* Making the titles bold */
+  font-size: 20px !important;
 }
 
-.employment-title {
-  font-size: 1.5em;
-  color: #333;
+.vertical-timeline-element-subtitle {
+  color: white; /* Setting the color for the subtitles */
+  font-size: 14px !important;
 }
 
-.employment-company {
-  font-size: 1.2em;
-  color: #555;
+.vertical-timeline-element-date {
+  font-size: 18px !important;
+  color: #fad233 !important; /* Setting the color for the date in the timeline */
 }
 
-.employment-description {
-  margin-top: 10px;
-  color: #666;
+/* Additional styles to adjust the spacing and layout */
+.vertical-timeline-element-content {
+  text-align: left;
+  padding-left: 20px !important; /* Adding padding to the left to separate the content from the border */
+  background-color: #23272e !important; /* Applying a background color for contrast */
 }

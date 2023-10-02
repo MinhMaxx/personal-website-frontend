@@ -28,7 +28,7 @@ const Home = () => {
   }, [currentSlide]);
 
   return (
-    <section id="home" className="home">
+    <section id="home" className="home jumbotron jumbotron-fluid">
       <div className="slideshow-container">
         {/* Mapping over the slides array to create a slide for each image */}
         {slides.map((src, index) => (
@@ -42,8 +42,11 @@ const Home = () => {
           </div>
         ))}
       </div>
-      <div className="home-text">
-        <h1>
+      <div className="home-text container">
+        <div className="wellcome-text">
+          <h2>Welcome to my humble website</h2>
+        </div>
+        <h1 class="display-4">
           {/* Displaying a greeting and name with gradient text effect that match my logo*/}
           Xin Chào, I'm <span className="gradient-text">Minh Nguyen</span>
         </h1>
@@ -61,7 +64,7 @@ const Home = () => {
             "a problem solver.",
             3000,
           ]}
-          wrapper="h1" // Wrapping the animated text in an h1 tag
+          wrapper="h2" // Wrapping the animated text in an h1 tag
           repeat={Infinity} // Making the animation loop infinitely
           delay={50} // Setting a delay between each character typing animation
         />

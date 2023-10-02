@@ -1,22 +1,40 @@
-.certificates {
-  padding: 20px;
+/* Styling the certificate cards */
+.certificate-card {
+  background-color: #23272e !important; /* Changing the card background color */
+  border: none !important; /* Removing the default border */
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Adding transition for smooth transform and shadow effects */
 }
 
-.certificate-item {
-  margin-bottom: 40px;
+/* Changing the card hover effect */
+.certificate-card:hover {
+  transform: translateY(-10px); /* Lifting the card up slightly on hover */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Applying shadow to make the card pop */
 }
 
-.certificate-title {
-  font-size: 1.5em;
-  color: #333;
+/* Styling the card title */
+.certificate-card .card-title {
+  color: #fad233; /* Changing the title color */
+  font-weight: bold;
 }
 
-.certificate-institution {
-  font-size: 1.2em;
-  color: #555;
+/* Styling the card subtitle */
+.certificate-card .card-subtitle {
+  margin-bottom: 15px; /* Adding margin at the bottom for spacing */
+  color: white !important; /* Making the text color white for better contrast */
 }
 
-.certificate-description {
-  margin-top: 10px;
-  color: #666;
+/* Styling the card text */
+.certificate-card .card-text {
+  color: white; /* Making the text color white for better contrast */
+}
+
+/* Remove default styles for the anchor tag */
+.certificate-link {
+  text-decoration: none; /* Removing the underline */
+  color: inherit; /* Inheriting the color from the parent element */
+}
+
+/* Applying hover effect to the anchor tag */
+.certificate-link:hover {
+  text-decoration: none; /* Removing the underline on hover */
 }
