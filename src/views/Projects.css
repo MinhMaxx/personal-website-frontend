@@ -1,31 +1,74 @@
-.project {
-  padding: 20px;
+.projects {
+  font-family: "RenogareSoft-Regular", sans-serif;
+  margin-top: 80px;
+  color: white; /* Text color */
+  background-color: #282a36; /* Background color */
+  padding: 10px;
 }
 
-.project-item {
-  margin-bottom: 40px;
+.projects h1 {
+  text-align: center;
+  margin-bottom: 20px;
 }
 
-.project-title {
-  font-size: 1.5em;
-  color: #333;
-}
-
-.project-details {
-  font-size: 1.2em;
-  color: #555;
-}
-
-.project-description {
-  margin-top: 10px;
-  color: #666;
+/* Styling the project cards */
+.project-card {
+  background-color: #23272e !important;
+  border: none !important;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 .project-link {
-  margin-top: 15px;
-  color: #3498db;
+  text-decoration: none;
+  color: inherit;
+}
+
+.project-link:hover {
   text-decoration: none;
 }
-.project-link:hover {
-  text-decoration: underline;
+
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.project-card .card-subtitle,
+.project-card .card-text {
+  color: white !important;
+}
+
+.project-card .card-title {
+  color: #fad233;
+  font-weight: bold;
+}
+
+.project-card .card-text {
+  text-align: left;
+}
+
+.technologies {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+/* Style for each technology tag */
+.tech-tag {
+  display: inline-block;
+  background-color: #282a36;
+  color: white;
+  border-radius: 4px;
+  padding: 5px 10px;
+  margin: 2px 5px; /* Adjust margins as needed for spacing between tags */
+  align-items: center; /* Center content vertically */
+  justify-content: center; /* Center content horizontally */
+  font-size: 14px; /* Adjust the font size as needed */
+  vertical-align: middle; /* Align inline or inline-block elements */
+}
+
+/* Styles for the icons within the technology tags */
+.tech-tag svg {
+  margin-right: 5px; /* Space between the icon and text */
+  vertical-align: middle; /* Align the icon with the text */
 }

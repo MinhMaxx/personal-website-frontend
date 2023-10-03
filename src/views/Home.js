@@ -6,10 +6,9 @@ import image1 from "../assets/images/home_image_1.jpg";
 import image2 from "../assets/images/home_image_2.JPG";
 import image3 from "../assets/images/home_image_3.JPG";
 import image4 from "../assets/images/home_image_4.JPG";
-import image5 from "../assets/images/home_image_5.JPG";
 
 // Array containing the image paths for the slideshow
-const slides = [image1, image2, image3, image4, image5];
+const slides = [image1, image2, image3, image4];
 
 const Home = () => {
   // State to keep track of the current slide being displayed
@@ -21,7 +20,7 @@ const Home = () => {
     const nextSlide = (currentSlide + 1) % slides.length;
 
     // Setting a timeout to change the slide every 10 seconds
-    const id = setTimeout(() => setCurrentSlide(nextSlide), 10000);
+    const id = setTimeout(() => setCurrentSlide(nextSlide), 7000);
 
     // Cleaning up the timeout when the component is unmounted or before the next render
     return () => clearTimeout(id);
@@ -50,19 +49,44 @@ const Home = () => {
           {/* Displaying a greeting and name with gradient text effect that match my logo*/}
           Xin Chào, I'm <span className="gradient-text">Minh Nguyen</span>
         </h1>
+
         {/* Implementing a type animation effect for different descriptions */}
         <TypeAnimation
           cursor={true} // Displaying a cursor animation
           // Defining the sequences of texts and delays for the type animation
           sequence={[
-            "a passionate developer.",
-            3000,
-            "a creative coder.",
-            3000,
-            "an enthusiastic learner.",
-            3000,
-            "a problem solver.",
-            3000,
+            ">a_passionate_developer",
+            2000,
+            ">",
+            500,
+            ">an_enthusiastic_learner",
+            2000,
+            ">",
+            500,
+            ">a_creative_coder",
+            2000,
+            ">",
+            500,
+            ">a_problem_solver",
+            2000,
+            ">",
+            500,
+            ">an_amateur_photographer",
+            2000,
+            ">",
+            500,
+            ">a_casual_gamer",
+            2000,
+            ">",
+            500,
+            ">a_food_enjoyer",
+            2000,
+            ">",
+            500,
+            ">an_average_sudoku_solver",
+            2000,
+            ">",
+            500,
           ]}
           wrapper="h2" // Wrapping the animated text in an h1 tag
           repeat={Infinity} // Making the animation loop infinitely

@@ -26,7 +26,7 @@ const Certificates = () => {
       <Container>
         <Row>
           {certificates.map((certificate) => (
-            <Col md={4} key={certificate._id} className="mb-4">
+            <Col md={12} lg={6} xl={4} key={certificate._id} className="mb-4">
               <a
                 href={certificate.link}
                 target="_blank"

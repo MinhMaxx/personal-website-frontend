@@ -13,7 +13,7 @@ const AboutMe = () => {
       <Tab.Container defaultActiveKey="employment">
         <Row>
           {/* Create a column for the tab navigation */}
-          <Col sm={2}>
+          <Col sm={3}>
             {/* Define a vertical tab navigation with pills style */}
             <Nav variant="pills" className="flex-column">
               {/* Create tabs for "Employment," "Education," and "Certificates" */}
@@ -32,7 +32,7 @@ const AboutMe = () => {
             </Nav>
           </Col>
           {/* Create a column to display tab content */}
-          <Col sm={10}>
+          <Col sm={9}>
             <Tab.Content>
               {/* Define the content for the "Employment" tab */}
               <Tab.Pane eventKey="employment">

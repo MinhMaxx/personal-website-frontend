@@ -29,7 +29,7 @@ const Education = () => {
         <Row>
           {/* Map over the degrees array and create Card components for each */}
           {degrees.map((degree) => (
-            <Col md={6} key={degree._id} className="mb-4">
+            <Col md={12} lg={6} xl={6} key={degree._id} className="mb-4">
               <Card className="degree-card">
                 <Card.Body>
                   <Card.Title>
