@@ -71,47 +71,59 @@ const Projects = () => {
   };
 
   return (
-    <section id="projects" className="projects">
-      <h1>My Projects</h1>
-      <Row>
-        {projects.map((project) => (
-          <Col sm={12} md={12} lg={6} xl={4} key={project._id} className="mb-4">
-            <Card className="project-card">
-              <Card.Body>
-                <Card.Title>{project.name}</Card.Title>
-                <Card.Subtitle className="mb-2 text-muted">
-                  {new Date(project.startDate).toLocaleDateString("en-US", {
-                    month: "long",
-                    year: "numeric",
-                  })}{" "}
-                  -{" "}
-                  {new Date(project.endDate).toLocaleDateString("en-US", {
-                    month: "long",
-                    year: "numeric",
-                  })}
-                </Card.Subtitle>
-                <div className="technologies">
-                  {project.technologiesUsed.map((tech, index) => (
-                    <span key={index} className="tech-tag">
-                      {getIcon(tech)} {tech}
-                    </span>
-                  ))}
-                </div>
-                <Card.Text>{project.description}</Card.Text>
-                <Button
-                  variant="outline-light"
-                  href={project.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  View Project
-                </Button>
-              </Card.Body>
-            </Card>
-          </Col>
-        ))}
-      </Row>
-    </section>
+    <div id="projects-container">
+      <section id="projects" className="projects">
+        <h1>My Projects</h1>
+        <p>
+          Here are some projects I've worked on. They give you a look into my
+          skills and interests in software development
+        </p>
+        <Row>
+          {projects.map((project) => (
+            <Col
+              sm={12}
+              md={12}
+              lg={6}
+              xl={4}
+              key={project._id}
+              className="mb-4"
+            >
+              <Card className="project-card">
+                <Card.Body>
+                  <Card.Title>{project.name}</Card.Title>
+                  <Card.Subtitle className="mb-2 text-muted">
+                    {new Date(project.startDate).toLocaleDateString("en-US", {
+                      month: "long",
+                      year: "numeric",
+                    })}{" "}
+                    -{" "}
+                    {new Date(project.endDate).toLocaleDateString("en-US", {
+                      month: "long",
+                      year: "numeric",
+                    })}
+                  </Card.Subtitle>
+                  <div className="technologies">
+                    {project.technologiesUsed.map((tech, index) => (
+                      <span key={index} className="tech-tag">
+                        {getIcon(tech)} {tech}
+                      </span>
+                    ))}
+                  </div>
+                  <Card.Text>{project.description}</Card.Text>
+                  <Button
+                    href={project.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    View Project
+                  </Button>
+                </Card.Body>
+              </Card>
+            </Col>
+          ))}
+        </Row>
+      </section>
+    </div>
   );
 };
 

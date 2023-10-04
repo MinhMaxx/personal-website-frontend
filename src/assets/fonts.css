@@ -4,3 +4,17 @@
   font-weight: normal;
   font-style: normal;
 }
+
+@font-face {
+  font-family: "Roboto-Bold";
+  src: url("Roboto-Bold.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto-Regular";
+  src: url("Roboto-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}

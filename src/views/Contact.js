@@ -1,35 +1,72 @@
 import React, { useState } from "react";
 import axios from "axios";
+import { Spinner, Container, Row, Col } from "react-bootstrap";
+import Swal from "sweetalert2";
 import "./Contact.css";
 
 const Contact = () => {
+  // State for form data
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     message: "",
   });
 
+  // State to control loading spinner
+  const [isLoading, setIsLoading] = useState(false);
+
+  // Function to handle form submission
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setIsLoading(true); // Activate loading state
 
     try {
-      // Adjust this URL to your backend endpoint for handling contact submissions
+      // Sending form data to backend
       await axios.post(
         "https://minh-personal-website-backend-3e5c1e321cd8.herokuapp.com/contact/submit",
         formData
       );
-      alert("Message sent successfully!");
+
+      // Display success alert
+      Swal.fire({
+        title: "Message Sent!",
+        text: "Your message has been sent successfully.",
+        icon: "success",
+        background: "#333",
+        customClass: {
+          title: "text-light",
+        },
+        showConfirmButton: false,
+        timer: 3000,
+      });
+
+      // Reset form fields
       setFormData({
         name: "",
         email: "",
         message: "",
       });
     } catch (error) {
+      // Log and display error
       console.error("Error sending message", error);
-      alert("Failed to send the message.");
+
+      Swal.fire({
+        title: "Failed!",
+        text: `${error.response.data}`,
+        icon: "error",
+        background: "#333",
+        customClass: {
+          title: "text-light",
+        },
+        showConfirmButton: false,
+        timer: 4000,
+      });
+    } finally {
+      setIsLoading(false); // Deactivate loading state
     }
   };
 
+  // Function to handle input changes
   const handleChange = (e) => {
     setFormData({
       ...formData,
@@ -39,33 +76,104 @@ const Contact = () => {
 
   return (
     <section id="contact" className="contact">
-      <h2>Contact Me</h2>
-      <form onSubmit={handleSubmit} className="contact-form">
-        <input
-          type="text"
-          name="name"
-          value={formData.name}
-          onChange={handleChange}
-          placeholder="Name"
-          required
-        />
-        <input
-          type="email"
-          name="email"
-          value={formData.email}
-          onChange={handleChange}
-          placeholder="Email"
-          required
-        />
-        <textarea
-          name="message"
-          value={formData.message}
-          onChange={handleChange}
-          placeholder="Your Message"
-          required
-        ></textarea>
-        <button type="submit">Send Message</button>
-      </form>
+      <Container>
+        <h1>Contact Me</h1>
+        <p>
+          Reach out to me through the contact form, connect on social media, or
+          download my resume for a comprehensive view of my expertise.
+        </p>
+        <Row>
+          {/* Contact form */}
+          <Col lg={8}>
+            <form onSubmit={handleSubmit} className="contact-form">
+              <input
+                type="text"
+                name="name"
+                value={formData.name}
+                onChange={handleChange}
+                placeholder="Name"
+                required
+              />
+              <input
+                type="email"
+                name="email"
+                value={formData.email}
+                onChange={handleChange}
+                placeholder="Email"
+                required
+              />
+              <textarea
+                name="message"
+                value={formData.message}
+                onChange={handleChange}
+                placeholder="Your Message"
+                required
+              ></textarea>
+              <button
+                type="submit"
+                disabled={isLoading}
+                className={isLoading ? "btn btn-secondary" : "btn btn-primary"}
+              >
+                {isLoading ? (
+                  <Spinner
+                    as="span"
+                    animation="border"
+                    size="sm"
+                    role="status"
+                    aria-hidden="true"
+                  />
+                ) : null}
+                Send Message
+              </button>
+            </form>
+          </Col>
+          {/* Profile section */}
+          <Col lg={4}>
+            <div className="profile-section">
+              <img
+                src="https://i.imgur.com/9QLUXTEm.jpg"
+                alt="Your Profile"
+                className="profile-image"
+              />
+              {/* Social media icons */}
+              <div className="social-media-icons contact-social-media-icons">
+                <a
+                  href="https://www.linkedin.com/in/binh-minh-nguyen1998/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="nav-link"
+                >
+                  <i className="fa fa-linkedin-square" aria-hidden="true"></i>
+                </a>
+                <a
+                  href="https://github.com/MinhMaxx"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="nav-link"
+                >
+                  <i className="fa fa-github" aria-hidden="true"></i>
+                </a>
+                <a
+                  href="https://www.instagram.com/minh.nguyen__"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="nav-link"
+                >
+                  <i className="fa fa-instagram" aria-hidden="true"></i>
+                </a>{" "}
+              </div>
+              {/* Download Resume button */}
+              <a
+                href="src/assets/Binh Minh Nguyen - Software Engineer Resume.docx"
+                download
+                className="btn btn-download-resume"
+              >
+                Download My Résumé
+              </a>
+            </div>
+          </Col>
+        </Row>
+      </Container>
     </section>
   );
 };

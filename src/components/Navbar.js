@@ -6,7 +6,7 @@ import "./Navbar.css";
 
 const MyNavbar = () => {
   // State to handle the color of the active link
-  const [activeLinkColor, setActiveLinkColor] = useState("#fad027"); // Default color set to cyan
+  const [activeLinkColor, setActiveLinkColor] = useState("#fad027");
 
   // Function to set the active link's color based on the section
   const handleSetActive = (to) => {

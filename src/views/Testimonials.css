@@ -1,8 +1,9 @@
 /* General styling for the entire Testimonials section */
 .testimonials {
-  padding: 50px 0;
-  font-family: "RenogareSoft-Regular", sans-serif;
+  margin-top: 80px;
+  padding: 10px;
   color: white;
+  font-family: "Roboto-Regular", sans-serif;
 }
 
 /* Styling for the container in the Testimonials section */
@@ -13,6 +14,7 @@
 /* Styling for the headers in the Testimonials section */
 .testimonials h1,
 .testimonials h5 {
+  font-family: "RenogareSoft-Regular", sans-serif;
   text-align: center;
   margin-bottom: 20px;
 }
@@ -57,6 +59,7 @@
 /* Styling for the title inside the testimonial card */
 .testimonial-card .card-title {
   color: #fad027;
+  font-family: "Roboto-Bold", sans-serif;
 }
 
 /* Styling for the testimonial submission form */
@@ -83,11 +86,16 @@
   color: white;
   cursor: pointer;
   border: none;
+  font-family: "Roboto-Bold", sans-serif;
 }
 
 /* Hover effect for the submit button */
 .testimonial-form button:hover {
-  background-color: #ff544f;
+  background-color: #ffa041;
+}
+
+.testimonial-form button:active {
+  background-color: #ff7c4a !important;
 }
 
 /* Responsive design for screens smaller than 992px */

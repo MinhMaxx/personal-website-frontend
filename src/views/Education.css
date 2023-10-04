@@ -14,18 +14,22 @@
 /* Styling the card title */
 .degree-card .card-title {
   color: #fad233; /* Change the title color */
-  font-weight: bold;
+  font-size: 22px;
+  font-family: "Roboto-Bold", sans-serif;
 }
 
 /* Styling the card subtitle */
 .degree-card .card-subtitle {
   margin-bottom: 15px; /* Add margin at the bottom for spacing */
   color: white !important; /* Make the text color white for better contrast */
+  font-family: "Roboto-Bold", sans-serif;
 }
 
 /* Styling the card text */
 .degree-card .card-text {
   color: white; /* Make the text color white for better contrast */
+  font-family: "Roboto-Regular", sans-serif;
+  font-size: 16px;
 }
 
 /* Styling the field of study text */
@@ -33,4 +37,6 @@
   display: block; /* Make it block to appear on a new line */
   margin-bottom: 10px; /* Add margin at the bottom for spacing */
   color: #fad233; /* Change the text color */
+  font-family: "Roboto-Bold", sans-serif;
+  font-size: 16px;
 }

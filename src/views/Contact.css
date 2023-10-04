@@ -1,32 +1,97 @@
-/* Add your styling here */
+/* General styling for the Contact section */
 .contact {
-  padding: 20px;
-}
-
-.contact-form {
-  max-width: 500px;
-  margin: auto;
-}
-
-input,
-textarea {
-  display: block;
-  margin: 10px 0;
-  padding: 10px;
-  width: 100%;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-
-button {
-  padding: 10px 20px;
-  background-color: #333;
+  padding: 50px 0;
   color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
+  font-family: "Roboto-Regular", sans-serif;
+  background-color: #282a32;
 }
 
-button:hover {
-  background-color: #555;
+/* Override container background color */
+.contact.container {
+  background-color: #282a36 !important;
+}
+
+/* Heading styles */
+.contact h1 {
+  font-family: "RenogareSoft-Regular", sans-serif;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Paragraph styles */
+.contact p {
+  font-size: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 10px;
+}
+
+/* Style for SweetAlert popup text */
+.swal2-popup {
+  color: #fff !important;
+}
+
+/* Contact form styling */
+.contact-form {
+  padding: 20px;
+  background-color: #212529;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
+
+/* Input fields styling */
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 10px;
+  border-radius: 3px;
+  font-size: 0.9em;
+}
+
+/* Button styles */
+.contact-form button {
+  background-color: #fad027;
+  color: white;
+  cursor: pointer;
+  border: none;
+  font-family: "Roboto-Bold", sans-serif;
+}
+
+/* Hover and active states for button */
+.contact-form button:hover {
+  background-color: #ffa041;
+}
+.contact-form button:active {
+  background-color: #ff7c4a !important;
+}
+
+/* Profile image styling */
+.profile-image {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+/* Social media icons layout */
+.social-media-icons a {
+  display: inline-block;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+/* Download Resume Button */
+.btn-download-resume {
+  background-color: #fad027 !important;
+  color: white !important;
+  font-family: "Roboto-Bold", sans-serif !important;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .contact-form {
+    margin-bottom: 20px;
+  }
 }

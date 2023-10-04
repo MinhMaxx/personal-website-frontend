@@ -43,7 +43,7 @@ const Home = () => {
       </div>
       <div className="home-text container">
         <div className="wellcome-text">
-          <h2>Welcome to my humble website</h2>
+          <h2>Welcome to my website</h2>
         </div>
         <h1 class="display-4">
           {/* Displaying a greeting and name with gradient text effect that match my logo*/}
@@ -55,6 +55,8 @@ const Home = () => {
           cursor={true} // Displaying a cursor animation
           // Defining the sequences of texts and delays for the type animation
           sequence={[
+            ">",
+            2000,
             ">a_passionate_developer",
             2000,
             ">",
@@ -85,8 +87,6 @@ const Home = () => {
             500,
             ">an_average_sudoku_solver",
             2000,
-            ">",
-            500,
           ]}
           wrapper="h2" // Wrapping the animated text in an h1 tag
           repeat={Infinity} // Making the animation loop infinitely

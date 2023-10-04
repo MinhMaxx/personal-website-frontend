@@ -14,24 +14,30 @@
 /* Styling the card title */
 .certificate-card .card-title {
   color: #fad233; /* Changing the title color */
-  font-weight: bold;
+  font-size: 22px;
+  font-family: "Roboto-Bold", sans-serif;
 }
 
 /* Styling the card subtitle */
 .certificate-card .card-subtitle {
   margin-bottom: 15px; /* Adding margin at the bottom for spacing */
   color: white !important; /* Making the text color white for better contrast */
+  font-family: "Roboto-Bold", sans-serif;
+  font-size: 16px;
 }
 
 /* Styling the card text */
 .certificate-card .card-text {
   color: white; /* Making the text color white for better contrast */
+  font-family: "Roboto-Regular", sans-serif;
+  font-size: 16px;
 }
 
 /* Remove default styles for the anchor tag */
 .certificate-link {
   text-decoration: none; /* Removing the underline */
   color: inherit; /* Inheriting the color from the parent element */
+  font-family: "Roboto-Bold", sans-serif;
 }
 
 /* Applying hover effect to the anchor tag */

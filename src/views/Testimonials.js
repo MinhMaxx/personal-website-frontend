@@ -16,7 +16,7 @@ const Testimonials = () => {
     company: "",
     position: "",
     link: "",
-    testimonial: "",
+    testimony: "",
   });
 
   // Slider settings configuration
@@ -25,15 +25,15 @@ const Testimonials = () => {
     infinite: true,
     speed: 500,
     slidesToShow: 3,
-    slidesToScroll: 3,
+    slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 10000,
+    autoplaySpeed: 5000,
     responsive: [
       {
         breakpoint: 1320,
         settings: {
           slidesToShow: 2,
-          slidesToScroll: 2,
+          slidesToScroll: 1,
         },
       },
       {
@@ -96,7 +96,7 @@ const Testimonials = () => {
         company: "",
         position: "",
         link: "",
-        testimonial: "",
+        testimony: "",
       });
     } catch (error) {
       // Handle submission error
@@ -110,6 +110,8 @@ const Testimonials = () => {
         customClass: {
           title: "text-light",
         },
+        showConfirmButton: false,
+        timer: 4000,
       });
     } finally {
       // Reset loading state
@@ -189,11 +191,12 @@ const Testimonials = () => {
                 required
               />
               <textarea
-                name="testimonial"
-                value={formData.testimonial}
+                name="testimony"
+                value={formData.testimony}
                 onChange={handleChange}
                 placeholder="Your testimonial"
                 required
+                rows="3"
               ></textarea>
               <input
                 type="text"

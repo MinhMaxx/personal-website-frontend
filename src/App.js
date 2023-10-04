@@ -1,5 +1,6 @@
 import React from "react";
 import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 import Home from "./views/Home";
 import Projects from "./views/Projects";
 import Testimonials from "./views/Testimonials";
@@ -21,6 +22,7 @@ function App() {
       <Projects />
       <Testimonials />
       <Contact />
+      <Footer />
     </div>
   );
 }

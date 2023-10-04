@@ -2,7 +2,7 @@
 .navbar {
   background-color: #282a36 !important;
   padding: 0 1rem !important;
-  font-family: "RenogareSoft-Regular", sans-serif;
+  font-family: "Roboto-Regular", sans-serif;
 }
 
 /* Adjusting the brand image size */
@@ -14,7 +14,7 @@
 
 /* Style adjustments for navigation links */
 .nav-link {
-  font-size: 1rem !important;
+  font-size: 1.2rem !important;
   padding: 0.5rem !important;
   transition: color 0.3s ease-in-out;
 }

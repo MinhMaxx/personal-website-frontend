@@ -9,6 +9,11 @@ const AboutMe = () => {
   return (
     <section id="aboutme" className="aboutme">
       <h1>About Me</h1>
+
+      <p>
+        This is a somewhat rather long but not too long sentence to introduce
+        about myself. The second sentence should not the as long as the first
+      </p>
       {/* Create a tab container with the default active tab set to "employment" */}
       <Tab.Container defaultActiveKey="employment">
         <Row>

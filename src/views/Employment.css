@@ -6,18 +6,20 @@
 /* Styles for the vertical timeline elements */
 .vertical-timeline-element-title {
   color: #fad233 !important; /* Setting the color for the titles in the timeline */
-  font-weight: bold; /* Making the titles bold */
-  font-size: 20px !important;
+  font-size: 22px !important;
+  font-family: "Roboto-Bold", sans-serif;
 }
 
 .vertical-timeline-element-subtitle {
   color: white; /* Setting the color for the subtitles */
-  font-size: 14px !important;
+  font-size: 16px !important;
+  font-family: "Roboto-Regular", sans-serif;
 }
 
 .vertical-timeline-element-date {
-  font-size: 18px !important;
+  font-size: 20px !important;
   color: #fad233 !important; /* Setting the color for the date in the timeline */
+  font-family: "Roboto-Bold", sans-serif;
 }
 
 /* Additional styles to adjust the spacing and layout */
