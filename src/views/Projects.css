@@ -57,7 +57,7 @@
 .tech-tag {
   display: inline-block;
   background-color: #282a36;
-  color: white;
+  color: white !important;
   border-radius: 4px;
   padding: 5px 10px;
   margin: 2px 5px; /* Adjust margins as needed for spacing between tags */

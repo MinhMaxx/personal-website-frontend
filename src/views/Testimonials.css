@@ -1,39 +1,100 @@
-/* Add your styling here */
+/* General styling for the entire Testimonials section */
 .testimonials {
-  padding: 20px;
-}
-
-.testimony-cards {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.testimony-card {
-  margin: 10px;
-  padding: 10px;
-  border: 1px solid #ccc;
-}
-
-.testimony-form {
-  margin-top: 20px;
-}
-
-input,
-textarea {
-  display: block;
-  margin: 10px 0;
-  padding: 10px;
-  width: 300px;
-}
-
-button {
-  padding: 10px 20px;
-  background-color: #333;
+  padding: 50px 0;
+  font-family: "RenogareSoft-Regular", sans-serif;
   color: white;
-  border: none;
-  cursor: pointer;
 }
 
-button:hover {
-  background-color: #555;
+/* Styling for the container in the Testimonials section */
+.testimonials.container {
+  background-color: #282a36 !important;
+}
+
+/* Styling for the headers in the Testimonials section */
+.testimonials h1,
+.testimonials h5 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Style for SweetAlert popup text */
+.swal2-popup {
+  color: #fff !important;
+}
+
+/* Padding for individual slick slides */
+.slick-slide {
+  padding: 10px;
+}
+
+/* Positioning for slick next arrow */
+.slick-next {
+  right: 0px !important;
+  z-index: 1;
+}
+
+/* Positioning for slick previous arrow */
+.slick-prev {
+  left: 0px !important;
+  z-index: 1;
+}
+
+/* Styling for individual testimonial cards */
+.testimonial-card {
+  background-color: #212529 !important;
+  border-color: transparent !important;
+  color: white !important;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+}
+
+/* Hover effect for testimonial cards */
+.testimonial-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Styling for the title inside the testimonial card */
+.testimonial-card .card-title {
+  color: #fad027;
+}
+
+/* Styling for the testimonial submission form */
+.testimonial-form {
+  padding: 20px;
+  background-color: #212529;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
+
+/* Common styling for input and textarea fields in the testimonial form */
+.testimonial-form input,
+.testimonial-form textarea {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 10px;
+  border-radius: 3px;
+  font-size: 0.9em;
+}
+
+/* Styling for the submit button in the testimonial form */
+.testimonial-form button {
+  background-color: #fad027;
+  color: white;
+  cursor: pointer;
+  border: none;
+}
+
+/* Hover effect for the submit button */
+.testimonial-form button:hover {
+  background-color: #ff544f;
+}
+
+/* Responsive design for screens smaller than 992px */
+@media (max-width: 992px) {
+  /* Add margin to the bottom of cards and forms for better spacing */
+  .testimonial-card,
+  .testimonial-form {
+    margin-bottom: 20px;
+  }
 }
