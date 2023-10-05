@@ -67,5 +67,7 @@ The backend for this project can be found [here](https://github.com/MinhMaxx/per
 3. Install the dependencies:  
    npm install
 
-4. Run the project:  
+4. Configure the file .env to match your backend URL
+
+5. Run the project in development mode:  
    npm start
