@@ -1,9 +1,9 @@
 import React from "react";
 import { Tab, Row, Col, Nav } from "react-bootstrap";
 import "./AboutMe.css";
-import Employment from "./Employment";
-import Education from "./Education";
-import Certification from "./Certificates";
+import Employment from "./About Me Tabs/Employment";
+import Education from "./About Me Tabs/Education";
+import Certification from "./About Me Tabs/Certificates";
 
 const AboutMe = () => {
   return (

@@ -16,7 +16,7 @@ const Testimonials = () => {
     company: "",
     position: "",
     link: "",
-    testimony: "",
+    testimonial: "",
   });
 
   // Slider settings configuration
@@ -96,7 +96,7 @@ const Testimonials = () => {
         company: "",
         position: "",
         link: "",
-        testimony: "",
+        testimonial: "",
       });
     } catch (error) {
       // Handle submission error
@@ -191,8 +191,8 @@ const Testimonials = () => {
                 required
               />
               <textarea
-                name="testimony"
-                value={formData.testimony}
+                name="testimonial"
+                value={formData.testimonial}
                 onChange={handleChange}
                 placeholder="Your testimonial"
                 required

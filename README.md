@@ -1,70 +1,71 @@
-# Getting Started with Create React App
+# My Personal Website (Frontend)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Project Description
 
-## Available Scripts
+This is the frontend part of my personal website, designed to showcase my skills, experiences, projects, and achievements. Built using React, it features several sections including Home, About Me, Projects, Testimonials, and Contact. It interacts with a backend service to provide functionalities like testimonials and contact forms, using libraries such as React-Bootstrap for styling and Axios for HTTP requests. This website serves as both an online portfolio and an interactive resume.
 
-In the project directory, you can run:
+The backend for this project can be found [here](https://github.com/MinhMaxx/personal_website_backend).
 
-### `npm start`
+## Directory Structure
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+.src
+├── App.css
+├── App.js
+├── App.test.js
+├── assets
+│ ├── Binh Minh Nguyen - Software Engineer Resume.docx
+│ ├── RenogareSoft-Regular.ttf
+│ ├── Roboto-Bold.ttf
+│ ├── Roboto-Regular.ttf
+│ ├── fonts.css
+│ └── images
+│ ├── home_image_1.jpg
+│ ├── home_image_2.jpeg
+│ ├── home_image_3.jpeg
+│ ├── home_image_4.jpeg
+│ ├── home_image_5.jpeg
+│ └── home_image_6.jpg
+├── components
+│ ├── Footer.css
+│ ├── Footer.js
+│ ├── Navbar.css
+│ └── Navbar.js
+├── index.css
+├── index.js
+├── logo.svg
+├── reportWebVitals.js
+├── setupTests.js
+└── views
+├── About Me Tabs
+│ ├── Certificates.css
+│ ├── Certificates.js
+│ ├── Education.css
+│ ├── Education.js
+│ ├── Employment.css
+│ └── Employment.js
+├── AboutMe.css
+├── AboutMe.js
+├── Contact.css
+├── Contact.js
+├── Home.css
+├── Home.js
+├── Projects.css
+├── Projects.js
+├── Testimonials.css
+└── Testimonials.js
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## How To Run The Project
 
-### `npm test`
+0. Clone and run the backend repository [here](https://github.com/MinhMaxx/personal_website_backend)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. Clone the repository:  
+   git clone https://github.com/MinhMaxx/personal_website_frontend.git
 
-### `npm run build`
+2. Navigate into the project directory:  
+   cd personal_website_frontend
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+3. Install the dependencies:  
+   npm install
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+4. Run the project:  
+   npm start

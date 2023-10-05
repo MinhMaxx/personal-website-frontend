@@ -3,12 +3,14 @@ import React, { useState, useEffect } from "react";
 import "./Home.css";
 import { TypeAnimation } from "react-type-animation";
 import image1 from "../assets/images/home_image_1.jpg";
-import image2 from "../assets/images/home_image_2.JPG";
-import image3 from "../assets/images/home_image_3.JPG";
-import image4 from "../assets/images/home_image_4.JPG";
+import image2 from "../assets/images/home_image_2.jpeg";
+import image3 from "../assets/images/home_image_3.jpeg";
+import image4 from "../assets/images/home_image_4.jpeg";
+import image5 from "../assets/images/home_image_5.jpeg";
+import image6 from "../assets/images/home_image_6.jpg";
 
 // Array containing the image paths for the slideshow
-const slides = [image1, image2, image3, image4];
+const slides = [image1, image2, image3, image4, image5, image6];
 
 const Home = () => {
   // State to keep track of the current slide being displayed
