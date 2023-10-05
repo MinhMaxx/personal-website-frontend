@@ -54,7 +54,7 @@ const Testimonials = () => {
     const fetchTestimonials = async () => {
       try {
         const response = await axios.get(
-          "https://minh-personal-website-backend-3e5c1e321cd8.herokuapp.com/testimonial"
+          `${process.env.REACT_APP_API_BASE_URL}/testimonial`
         );
         setTestimonials(response.data);
       } catch (error) {
@@ -72,7 +72,7 @@ const Testimonials = () => {
 
     try {
       await axios.post(
-        "https://minh-personal-website-backend-3e5c1e321cd8.herokuapp.com/testimonial/submit",
+        `${process.env.REACT_APP_API_BASE_URL}/testimonial/submit`,
         formData
       );
 

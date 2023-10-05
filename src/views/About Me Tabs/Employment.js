@@ -16,7 +16,7 @@ const Employment = () => {
     const fetchEmployment = async () => {
       try {
         const response = await axios.get(
-          "https://minh-personal-website-backend-3e5c1e321cd8.herokuapp.com/employment"
+          `${process.env.REACT_APP_API_BASE_URL}/employment`
         );
         setHistories(response.data);
       } catch (error) {

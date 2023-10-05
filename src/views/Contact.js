@@ -23,7 +23,7 @@ const Contact = () => {
     try {
       // Sending form data to backend
       await axios.post(
-        "https://minh-personal-website-backend-3e5c1e321cd8.herokuapp.com/contact/submit",
+        `${process.env.REACT_APP_API_BASE_URL}/contact/submit`,
         formData
       );
 

@@ -12,7 +12,7 @@ const Education = () => {
       try {
         // Send a GET request to the specified API endpoint
         const response = await axios.get(
-          "https://minh-personal-website-backend-3e5c1e321cd8.herokuapp.com/degree"
+          `${process.env.REACT_APP_API_BASE_URL}/degree`
         );
         setDegrees(response.data); // Update the state with the fetched data
       } catch (error) {
