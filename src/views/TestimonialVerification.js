@@ -31,16 +31,16 @@ const TestimonialVerification = () => {
         // Show success alert with dark theme
         Swal.fire({
           title: "Success!",
-          text: "Testimonial successfully verified.",
+          text: "Testimonial verified! Awaiting admin approval.",
           icon: "success",
           background: "#333",
           customClass: {
             title: "text-light",
           },
           showConfirmButton: false,
-          timer: 4000,
+          timer: 5000,
         }).then((result) => {
-          window.location.href = "/#home";
+          window.location.href = "/";
         });
       } catch (error) {
         // Show error alert with dark theme
@@ -53,9 +53,9 @@ const TestimonialVerification = () => {
             title: "text-light",
           },
           showConfirmButton: false,
-          timer: 4000,
+          timer: 5000,
         }).then((result) => {
-          window.location.href = "/#home";
+          window.location.href = "/";
         });
       }
     };
