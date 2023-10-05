@@ -7,7 +7,7 @@ const TestimonialVerification = () => {
   const { token } = useParams();
 
   useEffect(() => {
-    const verifyTestimonial = () => {
+    const verifyTestimonial = async () => {
       // Show loading spinner with dark theme
       Swal.fire({
         title: "Verifying your testimonial...",
@@ -24,7 +24,7 @@ const TestimonialVerification = () => {
       });
 
       try {
-        axios.get(
+        const response = await axios.get(
           `${process.env.REACT_APP_API_BASE_URL}/testimonial/verify/${token}`
         );
 
@@ -37,11 +37,10 @@ const TestimonialVerification = () => {
           customClass: {
             title: "text-light",
           },
-          confirmButtonText: "OK",
+          showConfirmButton: false,
+          timer: 4000,
         }).then((result) => {
-          if (result.isConfirmed) {
-            window.location.href = "/#home";
-          }
+          window.location.href = "/#home";
         });
       } catch (error) {
         // Show error alert with dark theme
@@ -53,11 +52,10 @@ const TestimonialVerification = () => {
           customClass: {
             title: "text-light",
           },
-          confirmButtonText: "OK",
+          showConfirmButton: false,
+          timer: 4000,
         }).then((result) => {
-          if (result.isConfirmed) {
-            window.location.href = "/#home";
-          }
+          window.location.href = "/#home";
         });
       }
     };
