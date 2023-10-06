@@ -22,12 +22,13 @@ const Testimonials = () => {
   // Slider settings configuration
   const settings = {
     dots: false,
-    infinite: true,
+    infinite: false,
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 5000,
+    pauseOnHover: true,
     responsive: [
       {
         breakpoint: 1320,
@@ -78,7 +79,7 @@ const Testimonials = () => {
 
       // Show success alert
       Swal.fire({
-        title: "Success!",
+        title: "Thank you!",
         text: "Testimonial submitted! Please check your email for verification.",
         icon: "success",
         background: "#333",
@@ -103,8 +104,8 @@ const Testimonials = () => {
       console.error("Error submitting testimonial", error);
       // Show failure alert
       Swal.fire({
-        title: "Failed!",
-        text: `${error.response.data}`,
+        title: "An Error Occurred!",
+        text: error.response.data || "Error submitting testimonial",
         icon: "error",
         background: "#333",
         customClass: {
@@ -152,13 +153,24 @@ const Testimonials = () => {
                           <Card.Title>
                             {testimonial.name}{" "}
                             <i
-                              className="fa  fa-user-circle-o"
+                              className="fa fa-user-circle-o"
                               aria-hidden="true"
                             ></i>
                           </Card.Title>
                         </a>
                       ) : (
-                        <Card.Title>{testimonial.name}</Card.Title>
+                        <a
+                          href={`mailto:${testimonial.email}`}
+                          style={{ textDecoration: "none", color: "#fad027" }}
+                        >
+                          <Card.Title>
+                            {testimonial.name}{" "}
+                            <i
+                              className="fa  fa-envelope-o"
+                              aria-hidden="true"
+                            ></i>
+                          </Card.Title>
+                        </a>
                       )}
                       <Card.Subtitle className="mb-2">
                         {testimonial.position} at {testimonial.company}
