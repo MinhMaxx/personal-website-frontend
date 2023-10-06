@@ -11,8 +11,9 @@ const AboutMe = () => {
       <h1>About Me</h1>
 
       <p>
-        This is a somewhat rather long but not too long sentence to introduce
-        about myself. The second sentence should not the as long as the first
+        I'm a recent graduate aspiring to thrive in software development. My
+        passion is to collaborate with dynamic teams, learn, grow, and
+        contribute to impactful software solutions.
       </p>
       {/* Create a tab container with the default active tab set to "employment" */}
       <Tab.Container defaultActiveKey="employment">

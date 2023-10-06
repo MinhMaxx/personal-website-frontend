@@ -132,6 +132,10 @@ const Testimonials = () => {
     <section id="testimonials" className="testimonials">
       <Container fluid>
         <h1>Testimonials</h1>
+        <p>
+          These testimonials offer a glimpse into my professional conduct, skill
+          set, and dedication to every project I undertake.
+        </p>
         <Row className="align-items-center">
           <Col lg={8}>
             {/* Testimonial Slider */}
