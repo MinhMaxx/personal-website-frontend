@@ -79,10 +79,11 @@ const Testimonials = () => {
 
       // Show success alert
       Swal.fire({
-        title: "Thank you!",
-        text: "Testimonial submitted! Please check your email for verification.",
+        title: "Testimonial submitted!",
+        text: "Please check your email for verification.",
         icon: "success",
         background: "#333",
+        footer: "The email could be in your spam",
         customClass: {
           title: "text-light",
         },
