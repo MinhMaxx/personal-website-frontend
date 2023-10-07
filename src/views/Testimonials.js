@@ -145,7 +145,11 @@ const Testimonials = () => {
                 <Col key={testimonial._id} className="mb-4">
                   <Card className="testimonial-card">
                     <Card.Body>
-                      <Card.Text>"{testimonial.content}"</Card.Text>
+                      <Card.Text>
+                        <i class="fa fa-quote-left" aria-hidden="true"></i>{" "}
+                        {testimonial.content}{" "}
+                        <i class="fa fa-quote-right" aria-hidden="true"></i>
+                      </Card.Text>
                       {/* Conditional Rendering of Testimonial Link */}
                       {testimonial.link ? (
                         <a

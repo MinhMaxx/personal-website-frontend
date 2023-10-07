@@ -21,8 +21,6 @@
 
 .testimonials p {
   font-size: 20px;
-  padding-left: 20px;
-  padding-right: 20px;
   padding-bottom: 10px;
 }
 
@@ -69,6 +67,9 @@
   font-family: "Roboto-Bold", sans-serif;
 }
 
+.testimonial-card .card-text {
+  font-size: 16px;
+}
 /* Styling for the testimonial submission form */
 .testimonial-form {
   padding: 20px;
