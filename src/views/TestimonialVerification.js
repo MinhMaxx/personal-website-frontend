@@ -8,7 +8,7 @@ const TestimonialVerification = () => {
 
   useEffect(() => {
     const verifyTestimonial = async () => {
-      // Show loading spinner with dark theme
+      // Show loading spinner
       Swal.fire({
         title: "Verifying your testimonial...",
         background: "#333",
@@ -28,7 +28,7 @@ const TestimonialVerification = () => {
           `${process.env.REACT_APP_API_BASE_URL}/testimonial/verify/${token}`
         );
 
-        // Show success alert with dark theme
+        // Show success alert
         Swal.fire({
           title: "Success!",
           text: "Testimonial verified! Awaiting admin approval.",
@@ -43,10 +43,10 @@ const TestimonialVerification = () => {
           window.location.href = "/";
         });
       } catch (error) {
-        // Show error alert with dark theme
+        // Show error alert
         Swal.fire({
           title: "Error!",
-          text: error.response.data || "An error occurred",
+          text: "An error occurred when verifying testimonial!",
           icon: "error",
           background: "#333",
           customClass: {

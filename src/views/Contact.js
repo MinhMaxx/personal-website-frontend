@@ -47,12 +47,9 @@ const Contact = () => {
         message: "",
       });
     } catch (error) {
-      // Log and display error
-      console.error("Error sending message", error);
-
       Swal.fire({
         title: "Failed!",
-        text: `${error.response.data}`,
+        text: "An error occured when sending the contact form!",
         icon: "error",
         background: "#333",
         customClass: {

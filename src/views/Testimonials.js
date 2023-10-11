@@ -101,12 +101,10 @@ const Testimonials = () => {
         testimonial: "",
       });
     } catch (error) {
-      // Handle submission error
-      console.error("Error submitting testimonial", error);
       // Show failure alert
       Swal.fire({
         title: "An Error Occurred!",
-        text: error.response.data || "Error submitting testimonial",
+        text: "Error submitting testimonial",
         icon: "error",
         background: "#333",
         customClass: {
