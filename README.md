@@ -4,6 +4,9 @@
 
 This is the frontend part of my personal website, designed to showcase my skills, experiences, projects, and achievements. The website serves as an online portfolio/an interactive resume. The backend for this project can be found [here](https://github.com/MinhMaxx/personal_website_backend).
 
+## To-do
+- Implement Admin login, Admin site
+- Add /404 route for server/error that occurs
 
 ## Technologies Used
 
