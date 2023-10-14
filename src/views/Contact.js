@@ -73,7 +73,7 @@ const Contact = () => {
 
   return (
     <section id="contact" className="contact">
-      <Container>
+      <Container fluid>
         <h1>Contact Me</h1>
         <p>
           Reach out to me through the contact form, connect on social media, or

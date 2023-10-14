@@ -1,11 +1,8 @@
-/* NotFound.css */
-
-/* Base style for NotFound section */
 .not-found {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 80vh;
+  min-height: 85vh;
   color: white;
   text-align: center;
   background-color: #23272f;
