@@ -1,18 +1,23 @@
 .footer {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
   background-color: #1e2125 !important;
-  color: #fff;
-  text-align: center;
   padding: 20px 0;
   font-family: "Roboto-Regular", sans-serif;
+  min-height: 15vh;
 }
 
 .footer-content {
+  width: 100%;
   max-width: 1100px;
-  margin: 0 auto;
   padding: 0 20px;
+  box-sizing: border-box;
 }
 
 .footer-content p {
+  color: rgb(197, 197, 197);
   margin: 5px 0;
-  font-size: 14px;
+  font-size: 10px;
+  text-align: center;
 }

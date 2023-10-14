@@ -1,0 +1,26 @@
+/* NotFound.css */
+
+/* Base style for NotFound section */
+.not-found {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+  color: white;
+  text-align: center;
+  background-color: #23272f;
+}
+
+/* Applying gradient color */
+.gradient-text {
+  background: linear-gradient(90deg, #ff544f, #fad027);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+/* Font styling and centering text */
+.not-found-text {
+  font-family: "RenogareSoft-Regular", sans-serif;
+}
