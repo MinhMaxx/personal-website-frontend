@@ -20,9 +20,10 @@ const Testimonials = () => {
   });
 
   // Slider settings configuration
+  //This infinite slide setting will appear to have a duplicate slide due to Slider will create a clone for the infinity scroll if number of current slide is less than current slidesToShow.
   const settings = {
     dots: false,
-    infinite: false,
+    infinite: true,
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 1,
@@ -83,12 +84,10 @@ const Testimonials = () => {
         text: "Please check your email for verification.",
         icon: "success",
         background: "#333",
-        footer: "The email could be in your spam",
         customClass: {
           title: "text-light",
         },
-        showConfirmButton: false,
-        timer: 3000,
+        allowOutsideClick: false,
       });
 
       // Reset form data
@@ -238,7 +237,7 @@ const Testimonials = () => {
                 name="link"
                 value={formData.link}
                 onChange={handleChange}
-                placeholder="LinkedIn/social media link (optional)"
+                placeholder="LinkedIn/Social-media URL (optional)"
               />
               {/* Submit Button */}
               <button
