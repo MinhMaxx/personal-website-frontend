@@ -97,10 +97,12 @@ const Projects = () => {
                       year: "numeric",
                     })}{" "}
                     -{" "}
-                    {new Date(project.endDate).toLocaleDateString("en-US", {
-                      month: "long",
-                      year: "numeric",
-                    })}
+                    {project.endDate
+                      ? new Date(project.endDate).toLocaleDateString("en-US", {
+                          month: "long",
+                          year: "numeric",
+                        })
+                      : "Ongoing"}
                   </Card.Subtitle>
                   <div className="technologies">
                     {project.technologiesUsed.map((tech, index) => (

@@ -41,11 +41,12 @@ const Education = () => {
                     </small>
                   </Card.Text>
                   <Card.Subtitle className="mb-2 text-muted">
-                    {/* Format and display the date range */}
-                    {new Date(degree.endDate).toLocaleDateString("en-US", {
-                      month: "long",
-                      year: "numeric",
-                    })}
+                    {degree.endDate
+                      ? new Date(degree.endDate).toLocaleDateString("en-US", {
+                          month: "long",
+                          year: "numeric",
+                        })
+                      : "Ongoing"}
                   </Card.Subtitle>
                   <Card.Text>{degree.description}</Card.Text>
                 </Card.Body>

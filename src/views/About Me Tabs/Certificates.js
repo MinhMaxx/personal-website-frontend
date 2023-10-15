@@ -27,24 +27,24 @@ const Certificates = () => {
         <Row>
           {certificates.map((certificate) => (
             <Col md={12} lg={6} xl={4} key={certificate._id} className="mb-4">
-              <a
-                href={certificate.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="certificate-link"
-              >
-                <Card className="certificate-card">
-                  <Card.Body>
-                    <Card.Title>
+              <Card className="certificate-card">
+                <Card.Body>
+                  <Card.Title>
+                    <a
+                      href={certificate.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="certificate-link"
+                    >
                       {certificate.certificateName} - {certificate.organization}
-                    </Card.Title>
-                    <Card.Subtitle className="mb-2 text-muted">
-                      Issued {new Date(certificate.dateReceived).getFullYear()}
-                    </Card.Subtitle>
-                    <Card.Text>{certificate.description}</Card.Text>
-                  </Card.Body>
-                </Card>
-              </a>
+                    </a>
+                  </Card.Title>
+                  <Card.Subtitle className="mb-2 text-muted">
+                    Issued {new Date(certificate.dateReceived).getFullYear()}
+                  </Card.Subtitle>
+                  <Card.Text>{certificate.description}</Card.Text>
+                </Card.Body>
+              </Card>
             </Col>
           ))}
         </Row>
