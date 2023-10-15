@@ -46,7 +46,9 @@ const TestimonialVerification = () => {
         // Show error alert
         Swal.fire({
           title: "Error!",
-          text: "An error occurred when verifying testimonial!",
+          text:
+            error.response.data ||
+            "An error occurred when verifying testimonial!",
           icon: "error",
           background: "#333",
           customClass: {

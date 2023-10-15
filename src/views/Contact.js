@@ -49,7 +49,9 @@ const Contact = () => {
     } catch (error) {
       Swal.fire({
         title: "Failed!",
-        text: "An error occured when sending the contact form!",
+        text:
+          error.response.data ||
+          "An error occured when sending the contact form!",
         icon: "error",
         background: "#333",
         customClass: {
@@ -105,6 +107,7 @@ const Contact = () => {
                 onChange={handleChange}
                 placeholder="Your Message"
                 required
+                maxLength="600"
               ></textarea>
               <button
                 type="submit"

@@ -19,6 +19,15 @@ const Testimonials = () => {
     testimonial: "",
   });
 
+  const validateURL = (str) => {
+    if (!str) return true; // if string is empty, return true
+
+    const pattern =
+      /(https:\/\/www\.|http:\/\/www\.|https:\/\/|http:\/\/)?[a-zA-Z]{2,}(\.[a-zA-Z]{2,})(\.[a-zA-Z]{2,})?\/[a-zA-Z0-9]{2,}|((https:\/\/www\.|http:\/\/www\.|https:\/\/|http:\/\/)?[a-zA-Z]{2,}(\.[a-zA-Z]{2,})(\.[a-zA-Z]{2,})?)|(https:\/\/www\.|http:\/\/www\.|https:\/\/|http:\/\/)?[a-zA-Z0-9]{2,}\.[a-zA-Z0-9]{2,}\.[a-zA-Z0-9]{2,}(\.[a-zA-Z0-9]{2,})?/g;
+
+    return !!pattern.test(str);
+  };
+
   // Slider settings configuration
   //This infinite slide setting will appear to have a duplicate slide due to Slider will create a clone for the infinity scroll if number of current slide is less than current slidesToShow.
   const settings = {
@@ -72,49 +81,63 @@ const Testimonials = () => {
     e.preventDefault();
     setIsLoading(true); // Set loading state to true
 
-    try {
-      await axios.post(
-        `${process.env.REACT_APP_API_BASE_URL}/testimonial/submit`,
-        formData
-      );
-
-      // Show success alert
+    // Check if the link is a valid URL or empty
+    if (!validateURL(formData.link)) {
       Swal.fire({
-        title: "Testimonial submitted!",
-        text: "Please check your email for verification.",
-        icon: "success",
-        background: "#333",
-        customClass: {
-          title: "text-light",
-        },
-        allowOutsideClick: false,
-      });
-
-      // Reset form data
-      setFormData({
-        name: "",
-        email: "",
-        company: "",
-        position: "",
-        link: "",
-        testimonial: "",
-      });
-    } catch (error) {
-      // Show failure alert
-      Swal.fire({
-        title: "An Error Occurred!",
-        text: "Error submitting testimonial",
+        title: "Invalid URL!",
+        text: "Please enter a valid URL or leave the field empty.",
         icon: "error",
         background: "#333",
         customClass: {
           title: "text-light",
         },
-        showConfirmButton: false,
-        timer: 4000,
       });
-    } finally {
-      // Reset loading state
-      setIsLoading(false);
+      setIsLoading(false); // Reset loading state
+    } else {
+      try {
+        await axios.post(
+          `${process.env.REACT_APP_API_BASE_URL}/testimonial/submit`,
+          formData
+        );
+
+        // Show success alert
+        Swal.fire({
+          title: "Testimonial submitted!",
+          text: "Please check your email for verification.",
+          icon: "success",
+          background: "#333",
+          customClass: {
+            title: "text-light",
+          },
+          allowOutsideClick: false,
+        });
+
+        // Reset form data
+        setFormData({
+          name: "",
+          email: "",
+          company: "",
+          position: "",
+          link: "",
+          testimonial: "",
+        });
+      } catch (error) {
+        // Show failure alert
+        Swal.fire({
+          title: "An Error Occurred!",
+          text: error.response.data || "Error submitting testimonial",
+          icon: "error",
+          background: "#333",
+          customClass: {
+            title: "text-light",
+          },
+          showConfirmButton: false,
+          timer: 4000,
+        });
+      } finally {
+        // Reset loading state
+        setIsLoading(false);
+      }
     }
   };
 
@@ -135,7 +158,7 @@ const Testimonials = () => {
           set, and dedication to every project I undertake.
         </p>
         <Row className="align-items-center">
-          <Col lg={8}>
+          <Col lg={9}>
             {/* Testimonial Slider */}
             <Slider {...settings}>
               {testimonials.map((testimonial) => (
@@ -187,7 +210,7 @@ const Testimonials = () => {
               ))}
             </Slider>
           </Col>
-          <Col lg={4}>
+          <Col lg={3}>
             {/* Testimonial Submission Form */}
             <h5>Would you like to give a testimonial to support me?</h5>
             <Form onSubmit={handleSubmit} className="testimonial-form">
@@ -214,7 +237,8 @@ const Testimonials = () => {
                 onChange={handleChange}
                 placeholder="Your testimonial"
                 required
-                rows="3"
+                maxLength="300"
+                rows="2"
               ></textarea>
               <input
                 type="text"
