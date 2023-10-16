@@ -112,13 +112,15 @@ const Projects = () => {
                     ))}
                   </div>
                   <Card.Text>{project.description}</Card.Text>
-                  <Button
-                    href={project.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    View Project
-                  </Button>
+                  {project.link && (
+                    <Button
+                      href={project.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      View Project
+                    </Button>
+                  )}
                 </Card.Body>
               </Card>
             </Col>
