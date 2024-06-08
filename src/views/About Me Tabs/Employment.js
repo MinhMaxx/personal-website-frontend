@@ -40,11 +40,15 @@ const Employment = () => {
             date={`${new Date(history.startDate).toLocaleDateString("en-US", {
               month: "long",
               year: "numeric",
-            })} - 
-                  ${new Date(history.endDate).toLocaleDateString("en-US", {
-                    month: "long",
-                    year: "numeric",
-                  })}`}
+            })} -  
+                  ${
+                    history.endDate
+                      ? new Date(history.endDate).toLocaleDateString("en-US", {
+                          month: "long",
+                          year: "numeric",
+                        })
+                      : "Present"
+                  }`}
           >
             {/* Display position and company */}
             <h3 className="vertical-timeline-element-title">
