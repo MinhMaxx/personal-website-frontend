@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <div className="footer">
       <div className="footer-content">
-        <p>© 2023 Binh Minh Nguyen. All Rights Reserved.</p>
+        <p>© 2024 Binh Minh Nguyen. All Rights Reserved.</p>
         <p>
           <strong>Image Credits:</strong> All images are the property of the
           respective copyright owner.
