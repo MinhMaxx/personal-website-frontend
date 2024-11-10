@@ -164,7 +164,7 @@ const Contact = () => {
               </div>
               {/* Download Resume button */}
               <a
-                href={`/assets/Binh Minh Nguyen - Software Developer (June 2024).pdf`}
+                href={`/assets/Binh Minh Nguyen - Software Developer (Nov 2024).pdf`}
                 download
                 className="btn btn-download-resume"
               >
