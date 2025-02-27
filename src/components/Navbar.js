@@ -165,7 +165,7 @@ const MyNavbar = () => {
         <div className="social-icons">
           {/* LinkedIn Icon with link */}
           <a
-            href="https://www.linkedin.com/in/binh-minh-nguyen1998/"
+            href="https://www.linkedin.com/in/bminhnguyen-dev/"
             target="_blank"
             rel="noopener noreferrer"
             className="nav-link"

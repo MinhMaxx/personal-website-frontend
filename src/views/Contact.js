@@ -138,7 +138,7 @@ const Contact = () => {
               {/* Social media icons */}
               <div className="social-media-icons contact-social-media-icons">
                 <a
-                  href="https://www.linkedin.com/in/binh-minh-nguyen1998/"
+                  href="https://www.linkedin.com/in/bminhnguyen-dev/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="nav-link"
@@ -164,7 +164,7 @@ const Contact = () => {
               </div>
               {/* Download Resume button */}
               <a
-                href={`/assets/Binh Minh Nguyen - Software Developer (Nov 2024).pdf`}
+                href={`/assets/Binh Minh Nguyen - Software Developer (Feb 2025).pdf`}
                 download
                 className="btn btn-download-resume"
               >

@@ -45,7 +45,7 @@ const Home = () => {
       </div>
       <div className="home-text container">
         <div className="wellcome-text">
-          <h2>Welcome to my website</h2>
+          <h2>Welcome to my digital space</h2>
         </div>
         <h1 class="display-4">
           {/* Displaying a greeting and name with gradient text effect that match my logo*/}
